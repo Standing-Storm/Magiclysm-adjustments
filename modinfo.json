@@ -1,0 +1,12 @@
+[
+  {
+    "type": "MOD_INFO",
+    "id": "magiclysm_balance_tweaks",
+    "name": "Magiclysm Balance Tweaks",
+    "authors": [ "StandingStorm" ],
+    "maintainers": [ "StandingStorm" ],
+    "description": "Monster and Spawn edits to make Magiclysm more to my liking.",
+    "category": "magical",
+    "dependencies": [ "dda", "magiclysm" ]
+  }
+]
