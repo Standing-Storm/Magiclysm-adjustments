@@ -1,41 +1,5 @@
 [
   {
-    "id": "druid_veggrasp",
-    "type": "SPELL",
-    "name": "Vegetative Grasp",
-    "description": "This spell causes roots and vines to burst forth from the ground and grab your foes, slowing them and doing a small amount of damage as they dig in.",
-    "valid_targets": [ "hostile", "ground" ],
-    "flags": [ "LOUD", "SOMATIC", "VERBAL", "NO_LEGS", "NO_PROJECTILE" ],
-    "effect": "attack",
-    "effect_str": "entangled",
-    "shape": "blast",
-    "spell_class": "DRUID",
-    "base_casting_time": 100,
-    "base_energy_cost": 175,
-    "energy_source": "MANA",
-    "difficulty": 2,
-    "max_level": 20,
-    "min_damage": 1,
-    "max_damage": 20,
-    "damage_increment": 1.0,
-    "min_aoe": 2,
-    "max_aoe": 8,
-    "aoe_increment": 0.4,
-    "min_range": 3,
-    "max_range": 10,
-    "range_increment": 1.0,
-    "min_dot": 0,
-    "max_dot": 2,
-    "dot_increment": 0.1,
-    "min_duration": 1000,
-    "max_duration": 10000,
-    "duration_increment": 500,
-    "min_pierce": 1,
-    "max_pierce": 5,
-    "pierce_increment": 0.25,
-    "damage_type": "stab"
-  },
-  {
     "id": "summon_cats",
     "type": "SPELL",
     "name": { "str": "Bag of Cats" },
@@ -121,57 +85,5 @@
     "min_duration": 500,
     "max_duration": 5000,
     "duration_increment": 180
-  },
-  {
-    "id": "druid_healing",
-    "type": "SPELL",
-    "name": "Flourishing Restoration",
-    "description": "Draw mana from surrounding nature that will slowly heal your wounds.  It only functions in natural surroundings.",
-    "valid_targets": [ "self" ],
-    "effect": "effect_on_condition",
-    "effect_str": "EOC_FLOURISHING_RESTORATION",
-    "shape": "blast",
-    "flags": [ "CONCENTRATE", "SOMATIC", "VERBAL", "NO_LEGS" ],
-    "energy_source": "MANA",
-    "spell_class": "DRUID",
-    "difficulty": 8,
-    "base_casting_time": 12000,
-    "final_casting_time": 3000,
-    "casting_time_increment": -360,
-    "base_energy_cost": 800,
-    "final_energy_cost": 500,
-    "energy_increment": -12,
-    "max_level": 25,
-    "//": "each 3000 (30 second) heal 1 hp. 5 hp on level 0 (2.5m), 30 hp on level 25 (15 m)",
-    "min_duration": 15000,
-    "max_duration": 90000,
-    "duration_increment": 3000
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_FLOURISHING_RESTORATION",
-    "condition": {
-      "and": [
-        "u_is_outside",
-        { "not": { "u_near_om_location": "road_curved", "range": 1 } },
-        { "not": { "u_near_om_location": "road_four_way", "range": 1 } },
-        { "not": { "u_near_om_location": "road_tee", "range": 1 } },
-        { "not": { "u_near_om_location": "road_straight", "range": 1 } },
-        { "not": { "u_near_om_location": "road_end", "range": 1 } },
-        { "not": { "u_near_om_location": "road_sw", "range": 1 } },
-        { "not": { "u_near_om_location": "road_ne", "range": 1 } },
-        { "not": { "u_near_om_location": "road_ew", "range": 1 } },
-        { "not": { "u_near_om_location": "road_ns", "range": 1 } },
-        { "not": { "u_near_om_location": "road_nesw", "range": 1 } },
-        { "not": { "u_near_om_location": "road", "range": 1 } }
-      ]
-    },
-    "effect": [
-      {
-        "u_add_effect": "flask_regeneration",
-        "duration": { "math": [ "( 15000 + (u_val('spell_level', 'spell: druid_healing') * 3000)) " ] }
-      }
-    ],
-    "false_effect": [ { "u_message": "You must be surrounded by nature to heal with its power.", "type": "bad" } ]
   }
 ]
