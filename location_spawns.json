@@ -153,6 +153,6 @@
     "city_distance": [ 20, -1 ],
     "city_sizes": [ 0, 20 ],
     "flags": [ "GLOBALLY_UNIQUE" ],
-    "occurrences": [ 15, 100 ]
+    "occurrences": [ 5, 100 ]
   }
 ]
