@@ -28,7 +28,7 @@
     "city_distance": [ 20, -1 ],
     "city_sizes": [ 0, 20 ],
     "flags": [ "UNIQUE" ],
-    "occurrences": [ 25, 100 ]
+    "occurrences": [ 10, 100 ]
   },
   {
     "type": "overmap_special",
