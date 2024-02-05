@@ -46,13 +46,5 @@
     "type": "MONSTER",
     "copy-from": "mon_wisp",
     "armor": { "electric": 16, "bullet": 999 }
-  },
-  {
-    "id": "mon_troll",
-    "type": "MONSTER",
-    "copy-from": "mon_troll",
-    "hp": 280,
-    "regenerates": 10,
-    "armor": {  }
   }
 ]
