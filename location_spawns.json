@@ -58,7 +58,7 @@
     "locations": [ "forest_with_swamp" ],
     "city_distance": [ 20, -1 ],
     "city_sizes": [ 0, 20 ],
-    "flags": [ "UNIQUE" ],
+    "flags": [ "OVERMAP_UNIQUE" ],
     "occurrences": [ 33, 100 ]
   },
   {
